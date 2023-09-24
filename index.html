@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-           <title>Love Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="calculatorstyle.css">
 </head>
-<body>                        
+<body>
     <div class="container">
         <div class="content">
             <img src="icon.png" alt="">
@@ -21,21 +21,29 @@
         </div>
     </div>
     <script>
-        function calculateLove() {
-            // Get the input names
+      function calculateLove() {
+            // Get the names entered by the user
             var name1 = document.getElementById("name1").value.toLowerCase();
             var name2 = document.getElementById("name2").value.toLowerCase();
 
-            // Define the names for which you want to return 100%
+            // Define the names that should give a 100% result
             var perfectNames = ["kristiyan", "kris", "krisi", "kriskata", "kristiqn", "tuğçe", "tuce", "tuçe", "tugce", "tughche", "tugche", "tughce", "che", "çe"];
 
             // Check if both names are in the perfectNames array
             if (perfectNames.includes(name1) && perfectNames.includes(name2)) {
-                document.getElementById("result").innerHTML = "100% Lucky! True Love <3";
+                document.getElementById("result").innerHTML = "100%";
             } else {
-                document.getElementById("result").innerHTML = "0% No Way! WTF bro?!?!?!? Yuck forget about it.";
+                document.getElementById("result").innerHTML = "0%";
             }
         }
     </script>
+</head>
 <body>
+    <h1>Love Calculator</h1>
+    <p>Enter two names to calculate your love compatibility:</p>
+    <input type="text" id="name1" placeholder="Name 1">
+    <input type="text" id="name2" placeholder="Name 2">
+    <button onclick="calculateLove()">Calculate</button>
+    <p>Love Compatibility: <span id="result">---</span></p>
+</body>
 </html>
