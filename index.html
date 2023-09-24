@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculatorstyle.css">
     <title>Love Calculator</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="content">
             <img src="icon.png" alt="">
-            <h1>Love Calculator</h1>
-            <a href="#" onclick="love()">Calculate</a>
-            <p id="print">Your relationship result here</p>
-            <p id="statement"></p>
-        </div>
-    </div>
     <script>
         function calculateLove() {
             // Get the input names
@@ -27,12 +19,19 @@
 
             // Check if both names are in the perfectNames array
             if (perfectNames.includes(name1) && perfectNames.includes(name2)) {
-                document.getElementById("result").innerHTML = "100%";
+                document.getElementById("result").innerHTML = "100% Lucky! True Love <3";
             } else {
-                document.getElementById("result").innerHTML = "0%";
+                document.getElementById("result").innerHTML = "0% No Way! WTF bro?!?!?!? Yuck forget about it.";
             }
         }
     </script>
 </head>
+<body>
+    <h1>Love Calculator</h1>
+    <p>Enter two names to calculate your love compatibility:</p>
+    <input type="text" id="name1" placeholder="Name 1">
+    <input type="text" id="name2" placeholder="Name 2">
+    <button onclick="calculateLove()">Calculate Love</button>
+    <p>Love Compatibility: <span id="result"></span></p>
 </body>
 </html>
