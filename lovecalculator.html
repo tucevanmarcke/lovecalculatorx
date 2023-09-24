@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="calculatorstyle.css">
+</head>
+<body>
+    <h1>Love Calculator</h1>
+    <p>Enter two names to calculate love compatibility:</p>
+
+    <input type="text" id="name1" placeholder="Name 1">
+    <input type="text" id="name2" placeholder="Name 2">
+    <button onclick="calculateLove()">Calculate</button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateLove() {
+            const name1 = document.getElementById("name1").value.toLowerCase();
+            const name2 = document.getElementById("name2").value.toLowerCase();
+            const resultElement = document.getElementById("result");
+
+            if ((name1 === "kristiyan" && name2 === "tuğçe") || (name1 === "tuğçe" && name2 === "kristiyan")) {
+                resultElement.innerHTML = "DAMN!100% Love Compatibility!True Love <3";
+            } else {
+                resultElement.innerHTML = "No Way! WTF Bro?!?!? 0% Love Compatibility. Yuck! Forget about it.";
+            }
+        }
+    </script>
+</body>
+</html>
